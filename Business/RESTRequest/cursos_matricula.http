@@ -1,0 +1,34 @@
+@host = http://localhost:9090/api
+@uri = {{host}}/cursos
+
+### Listar cursos
+GET {{uri}}
+
+### Obtener un curso
+GET {{uri}}/2
+ 
+### Crear curso
+POST {{uri}}
+Content-Type: application/json
+
+{
+  "codigo_curso": "IF-0010",
+  "nombre": "Base de datos",
+  "creditos": 4,
+  "cupo_maximo": 30,
+  "estado": true
+}
+
+### Actualizar curso
+PUT {{uri}}/2
+Content-Type: application/json
+
+{
+  "nombre": "Bases de datos - Actualizado",
+  "creditos": 4,
+  "cupo_maximo": 35,
+  "estado": true
+}
+
+### Eliminar curso
+DELETE {{uri}}/1

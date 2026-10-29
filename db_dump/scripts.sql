@@ -1,0 +1,9 @@
+CREATE TABLE cursos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    codigo_curso VARCHAR(20) UNIQUE NOT NULL,
+    nombre VARCHAR(100) NOT NULL,
+    creditos INT NOT NULL,
+    cupo_maximo INT NOT NULL,
+    estado BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

@@ -1,0 +1,39 @@
+@host = http://localhost:8080/api
+@uri = {{host}}/cursos
+
+//Listar cursos
+GET {{uri}}
+###
+
+GET {{uri}}/2
+###
+
+//Agregar un curso
+POST {{uri}}
+Content-Type: application/json
+
+{
+    "codigo_curso": "IF-0011",
+    "nombre": " Redes de Computadoras",
+    "creditos": 4,
+    "cupo_maximo": 30,
+    "estado": 1
+}
+
+###
+
+//Actualizar un curso
+PUT {{uri}}/2
+Content-Type: application/json
+
+{
+    "nombre": " Redes de Computadoras - Actualizado",
+    "creditos": 4,
+    "cupo_maximo": 35,
+    "estado": 1
+}
+
+###
+
+//Eliminar un curso
+DELETE {{uri}}/2
